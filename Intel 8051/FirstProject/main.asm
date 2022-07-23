@@ -1,0 +1,4 @@
+	ORG 0x00
+	mov A, #HIGH(2Fh)
+LOOP:	JMP LOOP
+	END
