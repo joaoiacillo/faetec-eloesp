@@ -74,14 +74,16 @@ START
 	BANK0
 	
 MAIN	
-	; The mcu is useless until the run button is pressed.
-	; That's when the magic happens!
+	; The mcu is useless until the run button is
+	; pressed. That's when the magic happens!
 	BTFSC	RUNBTN
 	GOTO	MAIN
 	
+	; Moving the initial formation to PORTB.
 	MOVLW	INITIAL
 	MOVWF	PORTB
 	
+	; Setting REPEAT value to MAX.
 	MOVLW	MAX
 	MOVWF	REPEAT
 	
@@ -89,9 +91,13 @@ SHIFTL  ; Shifiting 1 bit to the left.
 	; This is the same as adding PORTB to PORTB.
 	CALL	DELAY
 	RLF	PORTB
+	
+	; Decrements REPEAT, and if it's 0, then will stop
+	; shifting to the left
 	DECFSZ	REPEAT
 	GOTO	SHIFTL
 	
+	; Setting REPEAT value to MAX.
 	MOVLW	MAX
 	MOVWF	REPEAT
 	
@@ -99,6 +105,9 @@ SHIFTR	; Shifting 1 bit to the right.
 	; This is the same as PORTB / 2
 	CALL	DELAY
 	RRF	PORTB
+	
+	; Decrements REPEAT, and if it's 0, then will stop
+	; shifting to the right
 	DECFSZ	REPEAT
 	GOTO	SHIFTR
 	
