@@ -46,19 +46,19 @@ ENDC
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	
 DELAY
-	MOVLW 0X5c
-	MOVWF DCounter1
-	MOVLW 0X26
-	MOVWF DCounter2
-	MOVLW 0X0b
-	MOVWF DCounter3
+	MOVLW	0X5c
+	MOVWF	DCounter1
+	MOVLW	0X26
+	MOVWF	DCounter2
+	MOVLW	0X0b
+	MOVWF	DCounter3
 LOOP
-	DECFSZ DCounter1, 1
-	GOTO LOOP
-	DECFSZ DCounter2, 1
-	GOTO LOOP
-	DECFSZ DCounter3, 1
-	GOTO LOOP
+	DECFSZ	DCounter1, 1
+	GOTO	LOOP
+	DECFSZ	DCounter2, 1
+	GOTO	LOOP
+	DECFSZ	DCounter3, 1
+	GOTO	LOOP
 	NOP
 	RETURN
 
