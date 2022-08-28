@@ -18,8 +18,8 @@
 ;;; Constants					;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	
-#DEFINE INITIAL B'00000001' ; The initial led formation once run btn is pressed
-#DEFINE	MAX	0x03
+#DEFINE INITIAL B'00000001'  ; The initial led formation once run btn is pressed
+#DEFINE	MAX	0x03  ; The number of times the effect will repeat both ways. 
 	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Variables					;;;
